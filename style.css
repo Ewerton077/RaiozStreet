@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding-top: 100px;
+}
+
+:root {
+    --primaria: #5777a7;
+    --secundaria: #364c6e;
+    --escuro: #0f172a;
+    --calro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+/* NAVEGAÇÃO */
+
+.navegacao {
+    background: var(--calro);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 520;
+    position: relative;
+    padding: 0.5rem 0;
+}
+/* SESSÃO DE NOVIDADE*/
+
+.novidade {
+    display: flex;
+    background: var(--escuro);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-novidade{
+    margin-left: -90px;
+}
+
+.tns-novidade{
+    margin-left: -200px;
+}
+.btn-novidade {
+    margin-left: 500px;
+    background: var(--primaria);
+    color: white;
+    font-weight: 600px;
+    width: 20%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5 ease;
+}
+
+.btn-novidade:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 299, 0.4);
+}
+
+/* PRODUTOS NOVIDADE */
+
+.cards-novidade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 20px;
+}
+
+.card-novidade {
+    border: 10px solid var(--primaria);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.retangulo {
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-novidade img {
+    border: 1.5px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card-novidade h2 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+
+
+.card-novidade {
+    background: white; /* fundo branco de cada card */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+/* ANIMAÇÃO DA BARRA DE NAVEGAÇÃO*/
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
