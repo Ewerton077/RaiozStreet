@@ -57,91 +57,91 @@ body {
 }
 /* SESSÃO DE NOVIDADE*/
 
-.novidade {
+.hero-section {
+    background-image: url(img/thumb-novos.png);
+    min-height: calc(100vh - 70px);
+    width: 100%;
     display: flex;
-    background: var(--escuro);
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.logo-novidade{
-    margin-left: -90px;
+.hero-content {
+    max-width: 800px;
+    margin-top: 700px;
 }
 
-.tns-novidade{
-    margin-left: -200px;
-}
-.btn-novidade {
-    margin-left: 500px;
-    background: var(--primaria);
+.hero-content a {
     color: white;
-    font-weight: 600px;
-    width: 20%;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.5 ease;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-novidade:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(79, 70, 299, 0.4);
+.hero-btn-primary {
+    background-color: var(--escuro);
+    color: var(--azul-principal);
+    border: 2px solid var(--escuro);
+    font-size: 1.1rem;
+}
+
+.hero-btn-primary:hover {
+    background-color: var(--primaria);
+    border-color: var(--primaria);
 }
 
 /* PRODUTOS NOVIDADE */
 
-.cards-novidade {
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     padding: 60px 20px;
 }
 
-.card-novidade {
-    border: 10px solid var(--primaria);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.retangulo {
-    width: 300px;
-    height: 400px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 20px;
-    text-align: center;
-}
-
-.card-novidade img {
-    border: 1.5px solid black;
-    border-radius: 8px;
+.card {
     cursor: pointer;
-}
-
-.card-novidade h2 {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-
-
-.card-novidade {
-    background: white; /* fundo branco de cada card */
+    background: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
     transition: transform 0.3s, box-shadow 0.3s;
-    
+}
+
+.card img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: var(--primaria);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
 }
 
 /* ANIMAÇÃO DA BARRA DE NAVEGAÇÃO*/
