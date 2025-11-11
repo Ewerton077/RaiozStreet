@@ -35,6 +35,69 @@ body {
     padding: 1rem 2rem;
 }
 
+/* === BARRA DE PESQUISA === */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width: 350px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 1rem;
+    flex: 1;
+    border-radius: 30px;
+}
+
+.search-bar button {
+    background: var(--primaria);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: var(--secundaria);
+}
+
+/* Centralização */
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 1024px) {
+    .search-bar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        order: 3;
+        width: 90%;
+        margin-top: 10px;
+    }
+}
+
+
 .logo {
     width: 100px;
 }
