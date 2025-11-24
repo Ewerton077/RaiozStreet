@@ -1,0 +1,227 @@
+/* ====== BARRA DE NAVEGAÇÃO (mesma da original) ====== */
+:root {
+    --primaria: #5777a7;
+    --secundaria: #364c6e;
+    --escuro: #0f172a;
+    --calro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--claro);
+}
+
+/* === NAVEGAÇÃO === */
+.navegacao {
+    background: var(--calro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 2rem;
+}
+
+/* === BARRA DE PESQUISA === */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width: 350px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 1rem;
+    flex: 1;
+    border-radius: 30px;
+}
+
+.search-bar button {
+    background: var(--primaria);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: var(--secundaria);
+}
+
+/* Centralização */
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 1024px) {
+    .search-bar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        order: 3;
+        width: 90%;
+        margin-top: 10px;
+    }
+}
+
+
+.logo {
+    width: 100px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 520;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* === MENU HAMBÚRGUER === */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+/* ====== RESTANTE DO CSS DO PRODUTO ====== */
+.produto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    padding: 8rem 2rem;
+}
+
+.produto-imagens {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.img-principal {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.miniaturas img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.05);
+}
+
+
+.produto-info {
+    color: var(--primaria);
+    flex: 1 1 400px;
+    max-width: 450px;
+}
+
+.produto-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.preco {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a7a1a;
+    margin-bottom: 20px;
+}
+
+/* Botões e inputs locais */
+.opcoes-tamanho button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px solid #0f172a ;
+    color: var(--primaria);
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.btn-comprar {
+    background-color: var(--escuro);
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    width: 63%;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .produto-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 1rem;
+    }
+}
